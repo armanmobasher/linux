@@ -1,0 +1,11 @@
+Bulk insert host to AWX Inventory
+
+1-Create Inventory in AWX (Inventory Name)
+2-go to path
+> docker exec -it awx_task /bin/bash
+
+3-Create list of host file
+>vi <HostListFile.txt>
+
+4-bulk insert
+>awx-manage inventory_import --inventory-name <Inventory Name> --source <HostListFile.txt>
